@@ -51,7 +51,7 @@ class Config:
 
     # training details
     normalize = False
-    learning_rate = 0.0001
+    learning_rate = 0.00005
     tot_epoch = 10000
     compress = True
 

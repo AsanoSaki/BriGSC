@@ -4,7 +4,7 @@
 
 ## Installation
 
-We implement SwinJSCC under python 3.10 and PyTorch 2.5.0
+We implement BriGSC under python 3.10 and PyTorch 2.5.0.
 
 ## Usage
 
