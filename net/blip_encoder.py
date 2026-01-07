@@ -14,7 +14,7 @@ class BLIP(nn.Module):
         num_beam: int = 3,
         max_length: int = 20,
         min_length: int = 5,
-        pretrained: str = 'ckpt/model_base_caption_capfilt_large.pth',
+        pretrained: str = 'ckpt/text_extractor.pth',
         image_size: int = 384,
         vit: str = 'base',
     ):

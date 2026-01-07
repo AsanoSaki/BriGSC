@@ -15,7 +15,7 @@ parser.add_argument('--datasets', type=str, default='datasets/kodak', help='data
 parser.add_argument('--model', type=str, default='BriGSC', choices=['BriGSC', 'BriGSC_W/O'], help='BriGSC model or BriGSC without Channel ModNet')
 parser.add_argument('--channel-type', type=str, default='awgn', choices=['awgn', 'rayleigh'], help='wireless channel model, awgn or rayleigh')
 parser.add_argument('--distortion-metric', type=str, default='MSE', choices=['MSE', 'MS-SSIM'], help='evaluation metrics')
-parser.add_argument('--comp_size', type=int, default=512, help='compress size')
+parser.add_argument('--comp_size', type=int, default=1024, help='compress size')
 parser.add_argument('--multiple-snr', type=str, default='10', help='random or fixed snr')
 args = parser.parse_args()
 
@@ -26,13 +26,13 @@ class Config:
     CUDA = True
     device = torch.device("cuda:0")
     norm = False
-    model_path = f"ckpt/{args.comp_size}.model"
+    model_path = f"ckpt/brigsc.model"
     vit_model_path = None
     logger = None
     compress = True
 
     image_dims = (3, 256, 256)
-    downsample = 2
+    downsample = 4
     vit_embed_dims = 768
 
     brigsc_encoder_kwargs = dict(
